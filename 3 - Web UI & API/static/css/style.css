@@ -1,0 +1,173 @@
+body {
+    background-color: white;
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h3 {
+    color: white;
+    align-content: center;
+}
+
+h4 {
+    color: black;
+}
+
+#container {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-right: 30px;
+}
+
+.header {
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-right: auto;
+    width: 100%;
+}
+
+.header a {
+    overflow: auto;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    padding-right: 45px;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header a.selected {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.header-right {
+    float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+}
+
+.main {
+    width: 60%;
+    padding: 40px;
+    padding-right: 600px;
+}
+
+.row1 {
+    padding: 40px;
+}
+
+.scenarios button {
+    background-color: white;
+    color: black;
+    border: 1px solid lightslategrey;
+    transition-duration: 0.25s;
+    border-radius: 4px;
+    min-width: 200px;
+    width: 20%;
+    height: 3%;
+    max-height: 5%;
+}
+
+.scenarios button:hover {
+    background-color: lightslategrey;
+    color: white;
+}
+
+/*Below is table on popURL page*/
+
+.column {
+    float: left;
+    width: auto;
+    padding: 40px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 500px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 450px) {
+    .column {
+        width: 50%;
+    }
+}
+
+table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    text-align: left;
+    width: auto;
+    float: left;
+    height: 450px;
+    overflow-y: scroll;
+    display: block;
+}
+
+#tC {
+    padding-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: lightgreen;
+    color: black;
+    text-align: left;
+}
+
+.output {
+    padding-left: 40px;
+}
+
+#footer {
+    text-decoration: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    padding: 8px 100px 8px 0px;
+    background-color: lightslategrey;
+    color: white;
+    text-align: center;
+}
