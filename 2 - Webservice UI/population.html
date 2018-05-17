@@ -1,0 +1,85 @@
+<!--Webservice can be found at the URL "https://greens1.github.io"-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FYP Query Tool</title>
+ <link rel="stylesheet" href="style.css"/> 
+</head>
+<body>
+<div id="container">
+    <div class="header">
+        <a href="/index.html" class="logo">TCD Final Year Project</a>
+        <div class="header-right">
+            <a href="/index.html">Home</a>
+            <a class="selected" href="/population.html">Population Query</a>
+        </div>
+    </div>
+    <div class="row" class="main">
+
+    <h2 style="margin-bottom: 6.0pt; line-height: 150%;"><span style="font-family: calibri, sans-serif;"></span>Population Query Tool</h2>
+    <p>You can select from three different options:</p>
+
+        <!-- Input -->
+        <div class="scenarios" float="top">
+            <button type="submit" class="button" onclick="tpButton()" id="scen1">Total Population</button>
+            <button type="submit" class="button" onclick="gpButton()" id="scen2">Population by Gender</button>
+            <button type="submit" class="button" onclick="gaButton()" id="scen3">Population by Gender and Age</button>
+        </div>
+        <br>
+        <div class="submit" float="bottom" id="submit" margin-right="10%">
+            <div class="totPop" style="display:none" id="totPop">
+                <label for="country">Country: </label>
+                <select id="country1" name="country1"></select>
+                <input type="year" placeholder="Enter Year:1960 - 2016" id="year1">
+                <button type="submit" onclick="retrieveS1()">Submit</button>
+            </div>
+       
+            <div class="genPop" style="display:none" id="genPop">
+                <label for="country">Country: </label>
+                <select id="country2" name="country2"></select>
+                <input type="year" placeholder="Enter Year:1960 - 2016" id="year2" width:auto;>
+                <label for="gender">Gender: </label>
+                <select id="gender1" name="gender">
+                    <option value="SP.POP.TOTL.MA.IN">Male</option>
+                    <option value="SP.POP.TOTL.FE.IN">Female</option>
+                    <option value="SP.POP.TOTL">Total</option>
+                </select>
+                <button type="submit" onclick="retrieveS2()">Submit</button>
+            </div>  
+            
+            <div class="gaPop" style="display:none" id="gaPop">
+                <label for="country">Country: </label>
+                <select id="country3" name="country3"></select>
+                <input type="year" placeholder="Enter Year:1960 - 2016" id="year3">
+                <label for="gender">Gender: </label>
+                <select id="gender2" name="gender">
+                    <option value=".MA.IN">Male</option>
+                    <option value=".FE.IN">Female</option>
+                    <option value=".TO">Total</option>
+                </select>
+                <label for="age">Age: </label>
+                <select id="age" name="age">
+                    <option value=".0014">0-14</option>
+                    <option value=".1564">15-64</option>
+                    <option value=".65UP">65+</option>
+                </select>
+                <button type="submit" onclick="retrieveS3()">Submit</button>
+            </div>  
+        </div>
+        </header>
+        
+        <!-- Output -->
+        <div class="output">
+          <p id="yearOutput"></p>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <a style= "text-decoration: none; color:lightgreen" href="mailto:greens1@tcd.ie">Email</a> - <span style="font-size: 14pt;">Sam Green</span> - <a style="text-decoration: none; color: lightgreen" href="https://www.linkedin.com/in/samjohngreen/">LinkedIn</a>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
